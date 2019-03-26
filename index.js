@@ -1,10 +1,14 @@
 const ratio = require('./ratio');
 const loan = require('./loan');
 
-const result = loan.getLoanDetail(
+console.log(loan._getFixedPrincipalDetail(
   150 * 10000,
-  0.05145,
+  4.9 / 100 / 12,
   25 * 12
-);
+))
 
-console.log(result);
+module.exports = {
+  getLoanDetail: loan.getLoanDetail,
+  getSeriesRatioOfHousingFund: ratio.getSeriesRatioOfHousingFund,
+  getSeriesRatioOfBussiness: ratio.getSeriesRatioOfBussiness
+}
